@@ -1,0 +1,23 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class DetectCollisions : MonoBehaviour
+{
+    
+    void Update()
+        // if an object goes past the players view in the game, remove the object
+    {
+        
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (gameObject != null)
+        {
+            Destroy(gameObject);
+            Destroy(other.gameObject);
+        }
+    }
+}
